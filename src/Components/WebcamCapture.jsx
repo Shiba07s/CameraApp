@@ -5,6 +5,7 @@ const WebcamCapture = () => {
   const [downloadButtonVisible, setDownloadButtonVisible] = useState(false);
   const [deviceIds, setDeviceIds] = useState([]);
   const [selectedDeviceId, setSelectedDeviceId] = useState(null);
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     navigator.mediaDevices.enumerateDevices().then(devices => {
@@ -13,27 +14,58 @@ const WebcamCapture = () => {
       setDeviceIds(deviceIds);
       if (deviceIds.length > 0) {
         setSelectedDeviceId(deviceIds[0]); // Set the first available device as the default
+      } else {
+        setErrorMessage('No camera devices found.');
       }
     });
   }, []);
 
   useEffect(() => {
     if (selectedDeviceId) {
+      const handlePermissionError = error => {
+        if (error.name === 'NotAllowedError') {
+          setErrorMessage('Camera access denied. Please grant camera permissions.');
+        } else {
+          setErrorMessage(`An error occurred: ${error.message}`);
+        }
+      };
+
       const constraints = {
         video: {
           deviceId: { exact: selectedDeviceId },
         },
       };
 
-      navigator.mediaDevices
-        .getUserMedia(constraints)
-        .then(stream => {
-          videoRef.current.srcObject = stream;
-          setDownloadButtonVisible(true);
+      navigator.permissions
+        .query({ name: 'camera' })
+        .then(permissionStatus => {
+          if (permissionStatus.state === 'granted') {
+            navigator.mediaDevices
+              .getUserMedia(constraints)
+              .then(stream => {
+                videoRef.current.srcObject = stream;
+                setDownloadButtonVisible(true);
+              })
+              .catch(handlePermissionError);
+          } else if (permissionStatus.state === 'prompt') {
+            permissionStatus.onchange = () => {
+              if (permissionStatus.state === 'granted') {
+                navigator.mediaDevices
+                  .getUserMedia(constraints)
+                  .then(stream => {
+                    videoRef.current.srcObject = stream;
+                    setDownloadButtonVisible(true);
+                  })
+                  .catch(handlePermissionError);
+              } else {
+                setErrorMessage('Camera access denied.');
+              }
+            };
+          } else {
+            setErrorMessage('Camera access denied.');
+          }
         })
-        .catch(err => {
-          console.error('An error occurred: ' + err);
-        });
+        .catch(handlePermissionError);
     }
 
     return () => {
@@ -69,6 +101,7 @@ const WebcamCapture = () => {
           </option>
         ))}
       </select>
+      {errorMessage && <p className="text-danger">{errorMessage}</p>}
       {downloadButtonVisible && (
         <button className="btn btn-primary mt-2" onClick={captureFrameAndDownload}>
           Download Current Frame
