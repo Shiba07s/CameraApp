@@ -1,55 +1,27 @@
-import React, { useState, useRef, useEffect } from 'react';
+// src/WebcamCapture.js
+import React, { useRef } from 'react';
 import Webcam from 'react-webcam';
 
-const WebcamComponent = () => {
+const WebcamCapture = ({ onCapture }) => {
   const webcamRef = useRef(null);
-  const [imgSrc, setImgSrc] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
 
-  const capture = () => {
+  const capturePhoto = () => {
     const imageSrc = webcamRef.current.getScreenshot();
-    setImgSrc(imageSrc);
+    onCapture(imageSrc);
   };
 
-  useEffect(() => {
-    // Check if the device is a mobile device
-    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    setIsMobile(isMobileDevice);
-  
-    // Request camera access if on a mobile device
-    if (isMobileDevice) {
-      const handleCameraAccess = async () => {
-        try {
-          const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-          if (webcamRef.current) {
-            webcamRef.current.stream = stream;
-          }
-        } catch (error) {
-          console.error('Error accessing camera:', error);
-        }
-      };
-  
-      handleCameraAccess();
-    }
-  }, []);
-  
   return (
     <div>
-      {isMobile ? (
-        <video ref={webcamRef} autoPlay playsInline style={{ width: '100%' }} />
-      ) : (
-        <Webcam
-          audio={false}
-          height={480}
-          ref={webcamRef}
-          screenshotFormat="image/jpeg"
-          width={640}
-        />
-      )}
-      <button onClick={capture}>Capture photo</button>
-      {imgSrc && <img src={imgSrc} alt="Captured" />}
+      <Webcam
+        audio={false}
+        ref={webcamRef}
+        screenshotFormat="image/jpeg"
+        width={640}
+        height={480}
+      />
+      <button onClick={capturePhoto}>Capture Photo</button>
     </div>
   );
 };
 
-export default WebcamComponent;
+export default WebcamCapture;
