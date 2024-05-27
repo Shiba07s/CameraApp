@@ -1,30 +1,25 @@
-// src/App.js
-import React, { useState } from 'react';
-import WebcamCapture from './Components/WebcamCapture';
-import CapturedImage from './Components/CapturedImage';
-import './App.css';
+import { useState } from 'react'
+import WebcamCapture from './Components/WebcamCapture'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MobileCameraCapture from './Components/MobileCameraCapture';
+import CameraApp from './Components/CameraApp';
 
-const App = () => {
-  const [capturedImage, setCapturedImage] = useState('');
 
-  const handleCapture = (imageSrc) => {
-    setCapturedImage(imageSrc);
-  };
-
-  const handleReset = () => {
-    setCapturedImage('');
-  };
+function App() {
+  const [count, setCount] = useState(0)
 
   return (
+    <>
     <div className="App">
-      <h1>Webcam Selfie App</h1>
-      {capturedImage ? (
-        <CapturedImage imageSrc={capturedImage} onReset={handleReset} />
-      ) : (
-        <WebcamCapture onCapture={handleCapture} />
-      )}
+      <header className="App-header">
+        {/* <WebcamCapture /> */}
+{/* <MobileCameraCapture /> */}
+<CameraApp />
+      </header>
     </div>
-  );
-};
+    </>
+  )
+}
 
-export default App;
+export default App
