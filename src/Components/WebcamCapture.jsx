@@ -15,21 +15,24 @@ const WebcamComponent = () => {
     // Check if the device is a mobile device
     const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     setIsMobile(isMobileDevice);
-
+  
     // Request camera access if on a mobile device
     if (isMobileDevice) {
-      navigator.mediaDevices.getUserMedia({ video: true })
-        .then((stream) => {
+      const handleCameraAccess = async () => {
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ video: true });
           if (webcamRef.current) {
             webcamRef.current.stream = stream;
           }
-        })
-        .catch((error) => {
+        } catch (error) {
           console.error('Error accessing camera:', error);
-        });
+        }
+      };
+  
+      handleCameraAccess();
     }
   }, []);
-
+  
   return (
     <div>
       {isMobile ? (
