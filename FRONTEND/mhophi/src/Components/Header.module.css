@@ -1,0 +1,103 @@
+.headerChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+  width: 1368px;
+  height: 100px;
+}
+.maskGroupIcon {
+  position: absolute;
+  top: 20px;
+  left: 1268px;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.groupChild,
+.headerInner,
+.headerItem {
+  position: absolute;
+  top: 25px;
+  left: 1103px;
+  width: 50px;
+  height: 50px;
+}
+.groupChild,
+.headerInner {
+  left: 1183px;
+}
+.groupChild {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-21xl);
+  background-color: var(--color-whitesmoke-100);
+  width: 255px;
+}
+.magnifyingGlass1Icon {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.rectangleParent,
+.searchForSomething {
+  position: absolute;
+  top: 16px;
+  left: 60px;
+}
+.rectangleParent {
+  top: 25px;
+  left: 818px;
+  width: 255px;
+  height: 50px;
+}
+.dashboard {
+  position: relative;
+  font-weight: 600;
+}
+.frameIcon {
+  width: 12px;
+  position: relative;
+  height: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.dashboardParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.ordersProductDetails {
+  position: relative;
+  font-size: var(--font-size-9xl);
+  font-weight: 600;
+  color: var(--dark);
+}
+.frameParent {
+  position: absolute;
+  top: 17px;
+  left: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-3xs);
+  font-size: var(--font-size-lg);
+  color: var(--color-darkslateblue);
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 72px;
+  width: 1368px;
+  height: 100px;
+  text-align: left;
+  font-size: var(--font-size-mini);
+  color: var(--dark);
+  font-family: var(--table-header);
+}

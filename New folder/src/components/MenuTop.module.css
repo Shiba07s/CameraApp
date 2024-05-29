@@ -1,0 +1,92 @@
+.dashboardIcon,
+.menuActiveChild {
+  width: 6px;
+  position: relative;
+  height: 70px;
+}
+.dashboardIcon {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.menuActive {
+  border-radius: var(--br-9xs);
+  background-color: var(--color-gray-100);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-2xl);
+}
+.menuActiveItem {
+  width: 6px;
+  position: relative;
+  background-color: var(--color-darkslateblue);
+  height: 70px;
+}
+.menuActive1 {
+  border-radius: var(--br-9xs);
+  background: linear-gradient(
+    -90deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(116, 105, 182, 0.2)
+  );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-2xl);
+}
+.rejectionIcon {
+  width: 25px;
+  position: relative;
+  height: 25px;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.clipPathGroup,
+.vectorIcon {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vectorIcon {
+  position: absolute;
+  height: 12.8%;
+  width: 4%;
+  top: 34%;
+  right: 46%;
+  bottom: 53.2%;
+  left: 50%;
+}
+.clipPathGroup {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.clipPathGroup,
+.group,
+.menuTop {
+  position: absolute;
+  left: 0;
+}
+.group {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.menuTop {
+  top: 105px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}

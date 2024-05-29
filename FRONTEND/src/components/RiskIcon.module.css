@@ -1,0 +1,30 @@
+.vectorIcon {
+  position: absolute;
+  height: 12.8%;
+  width: 4%;
+  top: 34%;
+  right: 46%;
+  bottom: 53.2%;
+  left: 50%;
+}
+.clipPathGroup,
+.vectorIcon {
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.clipPathGroup,
+.group {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.riskIcon {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}

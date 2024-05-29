@@ -1,0 +1,543 @@
+.groupChild,
+.ordersChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--white);
+}
+.ordersChild {
+  box-shadow: 0 4px 10px rgba(123, 32, 0, 0.2);
+  width: 72px;
+  height: 1024px;
+}
+.groupChild {
+  box-shadow: var(--elevatedbtn);
+  border-radius: 16px;
+  width: 1280px;
+  height: 812px;
+}
+.menulabel {
+  position: relative;
+  font-weight: 600;
+}
+.groupItem {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--color-darkslateblue);
+}
+.menulabel2 {
+  position: absolute;
+  width: 56.67%;
+  top: 23.33%;
+  left: 23.33%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ellipseParent {
+  width: 30px;
+  position: relative;
+  height: 30px;
+  text-align: center;
+  color: var(--white);
+}
+.menulabelGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.frameWrapper,
+.menulabelParent {
+  display: flex;
+  justify-content: flex-start;
+}
+.menulabelParent {
+  flex-direction: row;
+  align-items: center;
+  gap: 789px;
+}
+.frameWrapper {
+  position: absolute;
+  top: 764px;
+  left: 0;
+  border-radius: 0 0 var(--br-mini) var(--br-mini);
+  background-color: var(--color-whitesmoke-100);
+  width: 1280px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-4xs) var(--padding-xl);
+  box-sizing: border-box;
+}
+.divider1 {
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 0.5px);
+  right: 0;
+  left: 0;
+  background-color: var(--uilightgrey);
+  height: 1px;
+}
+.divider {
+  align-self: stretch;
+  height: 1px;
+}
+.divider,
+.value {
+  position: relative;
+}
+.cellValueWrapper,
+.cellValueWrapper1 {
+  position: absolute;
+  top: 7px;
+  left: 206px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cellValueWrapper1 {
+  left: 386px;
+}
+.icon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-9xs);
+  background-color: var(--color-darkgray);
+}
+.vectorIcon {
+  position: absolute;
+  height: 58.13%;
+  width: 75%;
+  top: 20.63%;
+  right: 12.5%;
+  bottom: 21.25%;
+  left: 12.5%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.checkboxselected {
+  width: 16px;
+  position: relative;
+  height: 16px;
+  display: none;
+}
+.icon1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-9xs);
+  background-color: var(--bgnone);
+  border: 1px solid var(--uimedgrey);
+  box-sizing: border-box;
+}
+.vectorIcon1 {
+  position: absolute;
+  height: 58.13%;
+  width: 75%;
+  top: 20.63%;
+  right: 12.5%;
+  bottom: 21.25%;
+  left: 12.5%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  display: none;
+}
+.checkboxdeselected {
+  width: 16px;
+  position: relative;
+  height: 16px;
+}
+.plus {
+  gap: var(--gap-3xs);
+}
+.id,
+.plus,
+.plusParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.plusParent {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-4xs);
+  color: var(--color-darkslateblue);
+}
+.allocated {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.allocatedWrapper,
+.enabledWrapper {
+  position: absolute;
+  border-radius: var(--br-8xs);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--table-header-size);
+  font-family: var(--table-header);
+}
+.allocatedWrapper {
+  top: 0;
+  left: 568px;
+  background-color: var(--color-whitesmoke-200);
+  width: 119px;
+  align-items: center;
+  padding: var(--padding-6xs) var(--padding-mini);
+  box-sizing: border-box;
+}
+.enabledWrapper {
+  top: 3px;
+  left: 945px;
+  background-color: var(--color-darkslateblue);
+  align-items: flex-start;
+  padding: var(--padding-8xs) var(--padding-3xs);
+  color: var(--white);
+}
+.frameChild {
+  position: absolute;
+  height: 96.77%;
+  width: 2.42%;
+  top: 0;
+  right: 5.31%;
+  bottom: 3.23%;
+  left: 92.27%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.notStartedWrapper {
+  position: absolute;
+  top: 2px;
+  left: 766px;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-mistyrose);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-7xs) var(--padding-3xs);
+  text-align: center;
+  font-size: var(--table-header-size);
+  font-family: var(--table-header);
+}
+.cellValueWrapperParent {
+  align-self: stretch;
+  position: relative;
+  height: 31px;
+}
+.row {
+  width: 1242px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-3xs);
+}
+.divider5 {
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 0.5px);
+  right: 0;
+  left: 0;
+  height: 1px;
+}
+.pendingWrapper {
+  position: absolute;
+  top: 3px;
+  left: 945px;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-coral);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-8xs) var(--padding-3xs);
+  text-align: center;
+  font-size: var(--table-header-size);
+  color: var(--white);
+  font-family: var(--table-header);
+}
+.allocated1 {
+  flex: 1;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.allocatedContainer,
+.rowParent,
+.unallocatedWrapper {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+}
+.allocatedContainer {
+  top: 0;
+  left: 568px;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-whitesmoke-200);
+  width: 119px;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-6xs) var(--padding-mini);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--table-header-size);
+  font-family: var(--table-header);
+}
+.rowParent,
+.unallocatedWrapper {
+  align-items: flex-start;
+}
+.unallocatedWrapper {
+  top: 0;
+  left: 568px;
+  border-radius: var(--br-8xs);
+  background-color: rgba(255, 53, 53, 0.2);
+  width: 119px;
+  flex-direction: row;
+  padding: var(--padding-6xs) var(--padding-mini);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: var(--table-header-size);
+  color: #ff3535;
+  font-family: var(--table-header);
+}
+.rowParent {
+  top: 230px;
+  left: 38px;
+  flex-direction: column;
+  font-family: var(--contentsmall);
+}
+.rectangleParent {
+  position: absolute;
+  top: 153px;
+  left: 116px;
+  width: 1280px;
+  height: 812px;
+  font-size: var(--contentsmall-size);
+}
+.orderNumber {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.shapesortIcon {
+  width: 8px;
+  position: relative;
+  height: 11px;
+}
+.orderNumberParent {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  min-width: 150px;
+}
+.productName {
+  position: relative;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.productNameWrapper,
+.quantityParent {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 150px;
+}
+.quantityParent {
+  gap: var(--gap-11xl);
+}
+.shapesortIcon2 {
+  width: 10.5px;
+  position: relative;
+  height: 11px;
+}
+.orderStatusParent {
+  width: 166.4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3px;
+  min-width: 150px;
+}
+.executionStatus {
+  width: 129px;
+  position: relative;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.executionStatusParent,
+.frameParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.executionStatusParent {
+  width: 150px;
+  align-items: center;
+  gap: var(--gap-10xl);
+  min-width: 150px;
+}
+.frameParent {
+  position: absolute;
+  top: 15px;
+  left: 29px;
+  align-items: flex-start;
+  gap: var(--gap-11xl);
+}
+.checkboxneutral1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 2.1px;
+  border: 0.7px solid var(--dark);
+  box-sizing: border-box;
+}
+.checkboxneutral {
+  position: absolute;
+  top: 16px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+}
+.tableHeader {
+  align-self: stretch;
+  position: relative;
+  height: 45px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.tableHeading {
+  position: absolute;
+  top: 329px;
+  left: 155px;
+  width: 1245px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.action {
+  position: absolute;
+  top: 344px;
+  left: 1292px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  width: 58px;
+}
+.createPlan,
+.heading {
+  position: relative;
+  font-weight: 600;
+}
+.heading {
+  flex: 1;
+}
+.createPlan {
+  line-height: 18px;
+}
+.plusIcon {
+  width: 14px;
+  position: relative;
+  height: 14px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.createPlanParent {
+  width: 143px;
+  border-radius: var(--br-5xs);
+  background-color: var(--white);
+  border: 1px solid var(--color-darkslateblue);
+  box-sizing: border-box;
+  justify-content: center;
+  padding: var(--padding-3xs) var(--padding-mini);
+  gap: var(--gap-3xs);
+}
+.createOrderParent,
+.createPlanParent,
+.frameGroup,
+.headingParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.createOrderParent {
+  border-radius: var(--br-5xs);
+  background-color: var(--color-darkslateblue);
+  justify-content: center;
+  padding: var(--padding-3xs) var(--padding-mini);
+  gap: var(--gap-3xs);
+  color: var(--white);
+}
+.frameGroup,
+.headingParent {
+  justify-content: flex-start;
+}
+.frameGroup {
+  gap: var(--gap-3xs);
+  font-size: var(--contentsmall-size);
+  color: var(--color-darkslateblue);
+}
+.headingParent {
+  position: absolute;
+  top: 187px;
+  left: 150px;
+  width: 1223px;
+  font-size: 25px;
+}
+.orders {
+  width: 100%;
+  position: relative;
+  background-color: #f7f6f4;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--table-header-size);
+  color: var(--dark);
+  font-family: var(--table-header);
+}

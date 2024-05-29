@@ -1,0 +1,22 @@
+.ordersIcon,
+.property1menuInactiveChild {
+  width: 6px;
+  position: relative;
+  height: 70px;
+}
+.ordersIcon {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.property1menuInactive {
+  border-radius: var(--br-9xs);
+  background-color: var(--color-gray-100);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 0;
+  gap: var(--gap-2xl);
+}

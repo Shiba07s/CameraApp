@@ -1,0 +1,26 @@
+ /* Header */
+header img {
+  height: 24px;
+}
+
+/* Sidebar */
+aside {
+  width: 200px;
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+
+aside .nav-link {
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+aside .nav-link:hover,
+aside .nav-link.active {
+  background-color: #e9ecef;
+}
+
+aside .nav-link img {
+  height: 18px;
+}

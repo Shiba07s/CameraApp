@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --table-header: Inter;
+  --contentsmall: "Open Sans";
+
+  /* font sizes */
+  --contentsmall-size: 14px;
+  --font-size-mini: 15px;
+  --table-header-size: 12px;
+  --font-size-9xl: 28px;
+  --font-size-lg: 18px;
+
+  /* Colors */
+  --color-whitesmoke-100: #f5f7fa;
+  --uilightgrey: #edf3f5;
+  --color-whitesmoke-200: #eaedf2;
+  --color-darkslateblue: #7469b6;
+  --white: #fff;
+  --dark: #171616;
+  --color-gray-100: rgba(255, 255, 255, 0.2);
+  --bgnone: rgba(255, 255, 255, 0);
+  --color-mistyrose: #ffe6e6;
+  --uimedgrey: #d1dce2;
+  --color-darkgray: #9ea7ac;
+  --color-coral: #ff7342;
+
+  /* Gaps */
+  --gap-3xs: 10px;
+  --gap-8xs: 5px;
+  --gap-11xl: 30px;
+  --gap-10xl: 29px;
+  --gap-4xs: 9px;
+  --gap-2xl: 21px;
+
+  /* Paddings */
+  --padding-3xs: 10px;
+  --padding-mini: 15px;
+  --padding-3xl: 22px;
+  --padding-4xs: 9px;
+  --padding-sm: 14px;
+  --padding-7xs: 6px;
+  --padding-8xs: 5px;
+  --padding-6xs: 7px;
+  --padding-xl: 20px;
+
+  /* Border radiuses */
+  --br-5xs: 8px;
+  --br-21xl: 40px;
+  --br-8xs: 5px;
+  --br-9xs: 4px;
+  --br-mini: 15px;
+
+  /* Effects */
+  --elevatedbtn: 0px 1px 6px rgba(0, 0, 0, 0.16);
+}
